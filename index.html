@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DISBUG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar bg-white fixed-top">
+        <div class="logo pl-2">
+            <img id="logo-disbug-img" src="./asserts/0_Bug_Open.svg" />
+            <a class="pl-2 text-dark" href="#main-container"><b>DISBUG</b></a>
+        </div>
+        <div class="right-content d-flex align-items-center">
+            <ul class="nav-items m-0">
+                <li class="item d-inline pr-3">
+                    <a class="text-dark" data-page="section2" href="#" onclick="$('html, body').animate({ scrollTop: $('#section2').offset().top  - 50}, 1000);
+                    return false;"><b>FEATURES</b></a>
+                </li>
+                <li class="item d-inline pr-3">
+                    <a class="text-dark"  data-page="lower"  href="#" onclick="$('html, body').animate({ scrollTop: $('#modules').offset().top + 100 }, 1000);
+                    return false;"><b>CONTACT US</b></a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="mobile right-content">
+            <img id ="whiteButton" src="./asserts/m_0_Menu_Button_White.png" onclick="hamburger()"/>
+            <img id ="colorButton" src="./asserts/m_0_Menu_Button_Color.png" onclick="hamburger()"/>
+        </div> -->
+        <!-- <div id="hamburgerList" class="hamburgerList mobile">
+            <img src="./asserts/m_0_Dropdown.png" />
+            <ul class="hamburger-nav-items">
+                <li class="item">
+                    <a data-page="section2" href="#" onclick="$('html, body').animate({ scrollTop: $('#section2').offset().top - 40}, 1000);
+                    document.getElementById('hamburgerList').style.display = 'none'; hambugerOn = true;console.log('LOGGING', hambugerOn);testfn();
+                    return false;">WHY CODELESS ACCELERATOR</a>
+                </li>
+                <li class="item">
+                    <a  data-page="lower"  href="#" onclick="$('html, body').animate({ scrollTop: $('#modules').offset().top + 50 }, 1000);
+                    document.getElementById('hamburgerList').style.display = 'none';hambugerOn = true; console.log(hambugerOn);
+                    return false;">MODULES</a>
+                </li>
+                <li class="item">
+                    <a id="ttgg" data-page="section5" href="#" onclick="$('html, body').animate({ scrollTop: $('#devops').offset().top +100}, 1000);
+                    document.getElementById('hamburgerList').style.display = 'none';hambugerOn = true;console.log(hambugerOn);
+                    return false;">DEVOPS</a>
+                </li>
+                <li class="item">
+                    <a data-page="section6" href="#" onclick="$('html, body').animate({ scrollTop: $('#benifits').offset().top }, 1000);
+                    document.getElementById('hamburgerList').style.display = 'none';hambugerOn = true;console.log(hambugerOn);
+                    return false;">BENEFITS</a>
+                </li>       
+               <li class="item">
+                    <a data-page="section7" href="#" onclick="$('html, body').animate({ scrollTop: $('#contactUs').offset().top }, 'slow');
+                    document.getElementById('hamburgerList').style.display = 'none';hambugerOn = true;console.log(hambugerOn);
+                    return false;">CONTACT US</a>
+                </li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="container-fluid section1 pt-5">
+            <div class="heading text-center">
+                <h1 class="font-weight-bold text-uppercase">Right way to report a bug</h1>
+                <h4 class="mt-3">Save over 60% of the time in bug reporting and reproduction workflows</h4>
+                <p class="font-italic mt-3">For QA testers, developers & project managers</p>
+                <h4 class="font-weight-bold mt-5">DOWNLOAD CHROME EXTENSION</h4>
+            </div>
+            <div class="row align-content-center text-center">
+                <div class="col-sm-4">
+                    <img id="s1_dev_img" class="sec1-main-img developer sec1-img1-animate" src="./asserts/1_Developer.svg" />
+                </div>
+                <div class="col-sm-4  mt-5 p-0">
+                    <button class="disbug-btn p-2 mr-4 text-white">
+                        <img id="s1_button_1" class="bug-open-img btn-img pr-1" src="./asserts/1_Bug_Open.svg" />
+                        Add to chrome
+                    </button>
+                    <button class="demo-btn p-2">Try demo
+                        <img id="s1_button_2" class="demo-open-img btn-img float-right " src="./asserts/1_Try_Demo_Open.svg" />
+                    </button>
+                </div>
+                <div class="col-sm-4 sec1-img2-animate">
+                    <img class="sec1-main-img tester" src="./asserts/1_Tester.svg" />
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-center align-content-center section2">
+            <p>Spending more time in reporting the bug than in finding the bug ?</p>
+            <h2 class="font-weight-bold">Disbug is here to rescue</h2>
+            <div class="row">
+                <div class="col">
+                    Image 1
+                </div>
+                <div class="col">
+                    Image 2
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid section3">
+            <p class="text-center">Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum (Need 10-15 words)</p>
+            <div class="row align-content-start">
+                <div class="col-sm-4">
+                    <p class="text-center">Image</p>
+                    <h5 class="text-center">Captures bug with all logs</h5>
+                    <div class="align-center">
+                        <ul class="list-unstyled sec3-list">
+                            <li>Technical Logs</li>
+                            <li>Console Logs</li>
+                            <li>Network Logs</li>
+                            <li>Local storages</li>
+                            <li>Events Log</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="text-center">Image</p>
+                    <h5 class="text-center">Complete design Specification</h5>
+                    <div class="align-center">
+                        <ul class="list-unstyled sec3-list">
+                            <li>Browse</li>
+                            <li>Operating System</li>
+                            <li>Screen size and more</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="text-center">Image</p>
+                    <h5 class="text-center">Integrated Report Management</h5>
+                    <div class="align-center">
+                        <ul class="list-unstyled sec3-list">
+                            <li>Jira</li>
+                            <li>Trello</li>
+                            <li>Github</li>
+                            <li>Gitlab</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid section4">
+
+        </div>
+        <div class="container-fluid section5">
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- INclude Jquery - Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="function.js"></script>
+</body>
+
+</html>
