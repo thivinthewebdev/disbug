@@ -4,6 +4,7 @@ html {
 
 body {
   font-family: 'Nunito Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 .container-fluid {
@@ -70,6 +71,14 @@ body {
   -webkit-transform: translateX(0px), rotate(0deg);
           transform: translateX(0px), rotate(0deg);
   opacity: 1;
+}
+
+.section2 img {
+  height: 500px;
+}
+
+.section3 .heading-img {
+  height: 200px;
 }
 
 .section3 .align-center {

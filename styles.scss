@@ -5,6 +5,7 @@ html
 
 body {
   font-family: 'Nunito Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 .container-fluid {
@@ -76,7 +77,16 @@ body {
 
 }
 
+.section2 {
+  img {
+    height: 500px;
+  }
+}
+
 .section3 {
+    .heading-img {
+      height: 200px;
+    }
     .align-center {
         text-align: center;
       }
