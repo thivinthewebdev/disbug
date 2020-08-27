@@ -117,7 +117,7 @@ body {
 
 .section2 {
   img {
-    height: 500px;
+    height: 400px;
   }
 }
 
@@ -138,6 +138,16 @@ body {
           list-style-image: url(./asserts/tickmark.svg);
         }
       }
+}
+
+.section4 {
+  img {
+    height: 100px;
+  }
+
+  .contact-container {
+    background-color: #fffaf3;
+  }
 }
 
 // Float Icon for demo btn and Chrome Button

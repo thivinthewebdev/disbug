@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   overflow-x: hidden;
 }
 
@@ -13,15 +13,19 @@ body {
 }
 
 .navbar {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
+
 .navbar #logo-disbug-img {
   height: 40px;
   cursor: pointer;
 }
+
 .navbar .logo {
   cursor: pointer;
 }
+
 .navbar .logo:hover {
   color: #233560;
 }
@@ -29,14 +33,27 @@ body {
 .section1 .sec1-main-img {
   height: 85%;
 }
+
 .section1 .heading h1 {
   width: 24vw;
   border-right: solid 5px;
   white-space: nowrap;
   overflow: hidden;
   padding-left: 24vw;
-  animation: textTyping 2s ease normal both;
+  -webkit-animation: textTyping 2s ease normal both;
+          animation: textTyping 2s ease normal both;
 }
+
+@-webkit-keyframes textTyping {
+  from {
+    width: 0;
+  }
+  to {
+    width: 73vw;
+    border-right: solid 0px;
+  }
+}
+
 @keyframes textTyping {
   from {
     width: 0;
@@ -46,6 +63,17 @@ body {
     border-right: solid 0px;
   }
 }
+
+@-webkit-keyframes cursorBlinking {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+    border-right: solid 5px;
+  }
+}
+
 @keyframes cursorBlinking {
   from {
     border-right-color: rgba(255, 255, 255, 0.75);
@@ -55,62 +83,88 @@ body {
     border-right: solid 5px;
   }
 }
+
 .section1 button {
   width: 41%;
   border-radius: 8px;
 }
+
 .section1 .disbug-btn {
   background-color: #1a73e8;
   cursor: pointer;
   opacity: 1;
+  -webkit-transition: opacity 0.5s ease, background-color 0.5s ease;
   transition: opacity 0.5s ease, background-color 0.5s ease;
-  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
+
 .section1 .disbug-btn:hover {
   background-color: #18489e;
   color: #fff;
 }
+
 .section1 .demo-btn {
   background-color: #ffffff;
   cursor: pointer;
   opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease, background-color 0.5s ease;
   transition: opacity 0.5s ease, background-color 0.5s ease;
-  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
+
 .section1 .demo-btn:hover {
   background-color: #233560;
   color: #fff;
 }
+
 .section1 .btn-img {
   height: 25px;
   cursor: pointer;
 }
+
 .section1 .sec1-img1-animate {
-  transform: translateX(0px), rotate(0deg);
+  -webkit-transform: translateX(0px), rotate(0deg);
+          transform: translateX(0px), rotate(0deg);
   opacity: 1;
 }
+
 .section1 .sec1-img2-animate {
-  transform: translateX(0px), rotate(0deg);
+  -webkit-transform: translateX(0px), rotate(0deg);
+          transform: translateX(0px), rotate(0deg);
   opacity: 1;
 }
 
 .section2 img {
-  height: 500px;
+  height: 400px;
 }
 
 .section3 .heading-img {
   height: 200px;
 }
+
 .section3 .align-center {
   text-align: center;
 }
+
 .section3 ul {
   display: inline-block;
   text-align: left;
 }
+
 .section3 ul li {
   list-style-image: url(./asserts/tickmark.svg);
+}
+
+.section4 img {
+  height: 100px;
+}
+
+.section4 .contact-container {
+  background-color: #fffaf3;
 }
 
 .float {
@@ -123,53 +177,71 @@ body {
   color: #FFF;
   border-radius: 50px;
   text-align: center;
-  box-shadow: 2px 2px 3px #999;
+  -webkit-box-shadow: 2px 2px 3px #999;
+          box-shadow: 2px 2px 3px #999;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   opacity: 0;
   cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+
 .float:nth-child(2) {
   bottom: 120px;
   background-color: #fff;
 }
+
 .float:nth-child(2):hover {
   background-color: #233560;
 }
+
 .float:nth-child(2):hover p {
   color: #fff;
 }
+
 .float img {
   max-width: 39px;
   max-height: 36px;
   /* text-align: center; */
   padding-left: 3px;
 }
+
 .float p {
   opacity: 0;
   color: #18489e;
   width: 0px;
   height: 0px;
+  -webkit-transition: all 0.01s ease 0.4s;
   transition: all 0.01s ease 0.4s;
 }
+
 .float:hover {
   width: 210px;
-  justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   background-color: #18489e;
 }
+
 .float:hover img {
   margin-left: 20px;
 }
+
 .float:hover p {
   opacity: 1;
   color: #fff;
   width: 130px;
   height: 11px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   text-align: center;
 }
-
 /*# sourceMappingURL=styles.css.map */
