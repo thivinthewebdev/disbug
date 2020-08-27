@@ -5,16 +5,27 @@
 ////////// ---------- USER DEFINED PROPERTIES ---------------- //////////////////////////
 
 //SECTION -1  IMAGES  User Defined properties for Setting up the Translation motion on Scroll
+
 var min_Anim_Height = 800;  // The maximum height of scroll above which the animation does not takes place upon scrolling
 var max_Translation = 80;  // The maximum Amount of translation for the images to move out upon Scrolling.
 var max_Rotation    = 10;  // xxxx --- Deprecated --- xxxxx // The maximum Amount of Rotation for the images to move out. 
 var min_Opacity     = 0.7;  // The minimum Opacity that the image mush fade into upon Scrolling
 
 
-// SECTION -1 - Try Demo and the Add to chrome button
+// SECTION -1 - Try Demo and the Add to chrome button - Translate in Scroll
+
 var s1_btn_start_pos    = 50; //px
 var s1_btn_end_pos      = 550; //px
 var s1_btn_transY_max   = 230; //px
+
+
+// Section 1 - Percentage Animation
+endValue = 60;
+startValue = 1;
+incrementNum = 1;
+durationNum = 2000;
+
+
 
 ///////////////// END OF  - USER DEFINED PROPERTIES ////////////////
 
@@ -53,7 +64,7 @@ $(".logo").hover( function()
 ,function()
 {
     $("#logo-disbug-img").attr("src" ,"./asserts/0_Bug_Open.svg")
-}).fadeIn(200);
+}).delay(300).fadeIn(200);
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -198,6 +209,27 @@ if(!isMobile)
 
     });
 }
+
+
+// Section 1 - NUmbers Percentage Animation
+//Delayed for 1200 s for the top heading animation to finish
+setTimeout(animateNumber(document.getElementById("NumPercent"),incrementNum,durationNum,endValue), 1200); 
+
+
+
+function  animateNumber(element,incrementNum,durationNum,endValue)
+{
+    anime(
+        {
+            targets: element,
+            textContent: endValue,
+            round: incrementNum ? 1/incrementNum : 1/5,
+            easing: 'easeInOutQuad',
+            duration: durationNum ? durationNum : 4000,
+        }
+    )
+}
+
 
 
 /////////////////////////////////////////////////////////////////////////////////

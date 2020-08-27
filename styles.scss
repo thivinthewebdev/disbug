@@ -36,6 +36,29 @@ body {
     height: 85%;
   }
 
+  .heading{
+    h1
+    {
+      width: 24vw;
+      border-right: solid 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      padding-left:24vw;
+      animation: textTyping 2s ease normal both;
+    }
+
+    @keyframes textTyping {
+      from{width: 0;}
+      to{width: 73vw; border-right: solid 0px;}
+    }
+
+    @keyframes cursorBlinking {
+      from{border-right-color: rgba(255,255,255,.75);}
+      to{border-right-color: transparent; border-right: solid 5px;  }
+      
+    }
+  }
+
   button {
     width: 41%;
     border-radius: 8px;
@@ -109,6 +132,11 @@ body {
     ul {
         display: inline-block;
         text-align: left;
+
+        li
+        {
+          list-style-image: url(./asserts/tickmark.svg);
+        }
       }
 }
 
