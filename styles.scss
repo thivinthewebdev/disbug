@@ -119,12 +119,107 @@ body {
   img {
     height: 400px;
   }
+
+  svg {
+    height: 400px;
+  }
+
+  .s2_svg2
+  {
+    // opacity: 0.5;
+    #s2_withdis_path1
+    {
+      stroke-dasharray: 190;  
+      stroke-dashoffset:200;
+      stroke-width: 2.5px;
+    }
+
+    #s2_withdis_path2
+    {
+      stroke-dasharray: 43;
+      stroke-dashoffset:  53;
+      stroke-width: 2.5px;
+    }
+
+    #s2_withdis_path3
+    {
+      stroke-dasharray: 43;
+      stroke-dashoffset:  53;
+      stroke-width: 2.5px;
+    }
+
+    #s2_withdis_path4
+    {
+      stroke-dasharray: 180;  
+      stroke-dashoffset:200;
+      stroke-width: 2.5px;
+    }
+
+    #s2_withdis_path_back
+    {
+      opacity: 0.5;
+    }
+
+    #man1
+    {
+      opacity: 0.5;
+      stroke-dasharray: 100;
+      stroke-dashoffset:100;
+    }
+
+    #man2
+    {
+      opacity: 0.5;
+      stroke-dasharray: 500;
+      stroke-dashoffset:500;
+    }
+
+    .s2_svg2_block_back
+    {
+      opacity: 0.5;
+    }
+
+    .s2_svg2_block_front
+    {
+      opacity: 0;
+      stroke-width: 2px;
+      stroke-dasharray: 500;
+      stroke-dashoffset:500;
+      transform: scale(1);
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    #s2_svg_man2_hand
+    {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: rotate(0deg);
+    }
+    
+
+
+  }                                                                                                      
 }
 
 .section3 {
     .heading-img {
       height: 200px;
     }
+    
+    .s3_heading{
+
+      .letter
+      {
+        transform-origin: 0 100%;
+        display: inline-block;
+      }
+      .s3_heading_wrapper
+      {
+        overflow: hidden;
+      }
+    }
+    
     .align-center {
         text-align: center;
       }
@@ -228,4 +323,22 @@ body {
       }
 
     
+}
+
+// For the Data Scroll
+
+
+[data-scroll]
+{
+  transition: transform 2.2s ease;
+}
+
+[data-scroll="in"]
+{
+  transform: translateY(0vh);
+}
+
+[data-scroll="out"]
+{
+  transform: translateY(8vh);
 }

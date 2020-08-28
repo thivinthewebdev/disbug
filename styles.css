@@ -142,8 +142,86 @@ body {
   height: 400px;
 }
 
+.section2 svg {
+  height: 400px;
+}
+
+.section2 .s2_svg2 #s2_withdis_path1 {
+  stroke-dasharray: 190;
+  stroke-dashoffset: 200;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg2 #s2_withdis_path2 {
+  stroke-dasharray: 43;
+  stroke-dashoffset: 53;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg2 #s2_withdis_path3 {
+  stroke-dasharray: 43;
+  stroke-dashoffset: 53;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg2 #s2_withdis_path4 {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 200;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg2 #s2_withdis_path_back {
+  opacity: 0.5;
+}
+
+.section2 .s2_svg2 #man1 {
+  opacity: 0.5;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.section2 .s2_svg2 #man2 {
+  opacity: 0.5;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+
+.section2 .s2_svg2 .s2_svg2_block_back {
+  opacity: 0.5;
+}
+
+.section2 .s2_svg2 .s2_svg2_block_front {
+  opacity: 0;
+  stroke-width: 2px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transform-box: fill-box;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.section2 .s2_svg2 #s2_svg_man2_hand {
+  transform-box: fill-box;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 .section3 .heading-img {
   height: 200px;
+}
+
+.section3 .s3_heading .letter {
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  display: inline-block;
+}
+
+.section3 .s3_heading .s3_heading_wrapper {
+  overflow: hidden;
 }
 
 .section3 .align-center {
@@ -243,5 +321,22 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   text-align: center;
+}
+
+[data-scroll] {
+  -webkit-transition: -webkit-transform 2.2s ease;
+  transition: -webkit-transform 2.2s ease;
+  transition: transform 2.2s ease;
+  transition: transform 2.2s ease, -webkit-transform 2.2s ease;
+}
+
+[data-scroll="in"] {
+  -webkit-transform: translateY(0vh);
+          transform: translateY(0vh);
+}
+
+[data-scroll="out"] {
+  -webkit-transform: translateY(8vh);
+          transform: translateY(8vh);
 }
 /*# sourceMappingURL=styles.css.map */

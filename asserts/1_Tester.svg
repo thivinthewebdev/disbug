@@ -7,7 +7,7 @@
             stroke-dashoffset: 560;
             stroke-dasharray: 560;
              fill-opacity: 0.2;
-            animation: dash1 3s ease forwards;
+            animation: dash1 1.5s ease forwards;
             stroke-width: 1.1px;
         }
 

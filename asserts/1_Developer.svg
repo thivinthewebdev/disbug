@@ -3,7 +3,7 @@
 <style>
             .translate-from-left
          {
-             animation:  dash1 3s ease forwards; ;
+             animation:  dash1 2s ease forwards; ;
              opacity: 1;
 
          }  
@@ -23,7 +23,8 @@
             stroke-dashoffset: 300;
             stroke-dasharray: 300;
             fill-opacity: 0;
-            animation: dash1 3s ease forwards;
+            stroke-width: 1.1px;
+            animation: dash1 1.5s ease forwards;
         }
 
              @keyframes dash1 {
@@ -32,6 +33,7 @@
               stroke-dasharray: 300;
               stroke-opacity: 0.5;
               fill-opacity: 0;
+              stroke-width: 0.2px;
               fill: none;
              
 

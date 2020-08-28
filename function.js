@@ -27,12 +27,26 @@ durationNum = 2000;
 
 
 
+
+// Section 2 - Images Animation timings ( Enter in Milli Seconds )
+
+var s2_svg_time_path = 500;   // PATH ANIMATION TIME
+var s2_svg_popup     = 1000;   // POP up Animation time 
+var s2_svg_man_img   = 500;
+
 ///////////////// END OF  - USER DEFINED PROPERTIES ////////////////
 
 
 ///////// --- GLOBAL VARIABLES DECLARATION ----- /////////
 var isMobile    =   false   ;   // To Detect Mobile Interface
 var st                      ;   // To Determine the Height of the top of Current Viewport on scroll in pixels        
+
+
+/////////// ------ LIBRARY FUNCTIONS DECLARATIONS -------------- ////////////
+
+ScrollOut({
+    threshold: .6
+})
 
 
 
@@ -124,8 +138,8 @@ if(!isMobile)
         else 
             opacityVal = (min_Anim_Height - st)*opacity_per_scroll
         if(opacityVal < min_Opacity) opacityVal = min_Opacity;
-        console.log("St : ", st, " val : " , val);
-        console.log("Opacity val : ", opacityVal, " val : " , val);
+        // console.log("St : ", st, " val : " , val);
+        // console.log("Opacity val : ", opacityVal, " val : " , val);
         
         if(st <= min_Anim_Height)
         {
@@ -213,7 +227,7 @@ if(!isMobile)
 
 // Section 1 - NUmbers Percentage Animation
 //Delayed for 1200 s for the top heading animation to finish
-setTimeout(animateNumber(document.getElementById("NumPercent"),incrementNum,durationNum,endValue), 1200); 
+setTimeout(animateNumber(document.getElementById("NumPercent"),incrementNum,durationNum,endValue),700); 
 
 
 
@@ -231,9 +245,8 @@ function  animateNumber(element,incrementNum,durationNum,endValue)
 }
 
 
-
 /////////////////////////////////////////////////////////////////////////////////
-/////////////               FLOAT BUTTONS                       ///////////////////
+/////////////               FLOAT BUTTONS                     ///////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
 if(!isMobile)
@@ -278,3 +291,234 @@ if(!isMobile)
 
 }
 
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////               SECTION 2                         ///////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+// Section 2 - With Disbug image animation - Anime.js
+
+var timeline_with_Disbug = anime.timeline({
+    easing: 'linear',
+    duration: 2000,loop:true,
+  });
+
+
+  timeline_with_Disbug
+  //Man - 1
+  .add({
+    targets: "#man1",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_man_img,
+    direction: 'forward',
+    delay: 1000
+})
+//Path - 1 - Stroke Fill
+.add({
+    targets: "#s2_withdis_path1",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+// Block 1 - Outer Stroke
+.add({
+    targets: "#block1",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 15,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward'
+})
+
+// Block - 1 - background opacity turn 0
+.add({
+    targets: "#block1-back",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 5,
+    direction: 'forward'
+})
+
+// Block - 1 - Zoom out 
+.add({
+    targets: "#block1",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: '15px',
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+// Path 2 - Animation
+.add({
+    targets: "#s2_withdis_path2",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+
+// Block 2 - Outer Stroke
+.add({
+    targets: "#block2",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 15,
+    easing: 'linear',
+    duration: 100,
+    direction: 'forward'
+})
+
+// Block - 2 - background opacity turn 0
+.add({
+    targets: "#block2-back",
+    opacity: 0,
+    easing: 'easeOutExpo',
+    duration: 10,
+    direction: 'forward'
+})
+
+// Block - 2 - Zoom out 
+.add({
+    targets: "#block2",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: 15,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+// Path 3 - Animation
+.add({
+    targets: "#s2_withdis_path3",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+
+// Block 2 - Outer Stroke
+.add({
+    targets: "#block3",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 15,
+    easing: 'linear',
+    duration: 100,
+    direction: 'forward'
+})
+
+// Block - 3 - background opacity turn 0
+.add({
+    targets: "#block3-back",
+    opacity: 0,
+    easing: 'easeOutExpo',
+    duration: 10,
+    direction: 'forward'
+})
+
+// Block - 3 - Zoom out 
+.add({
+    targets: "#block3",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: 15,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+
+// Path 4 - Animation
+.add({
+    targets: "#s2_withdis_path4",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 800,
+    direction: 'forward'
+})
+
+
+  .add({
+    targets: "#man2",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward',
+    delay: 250
+})
+
+
+.add({
+    targets: "#s2_svg_man2_hand",
+    keyframes: [
+        {rotate: '20deg',translateY: '-1.3vh', translateX: '0.2vw'},
+        {rotate: '0deg',translateY: '0vh',translateX: '0vw'}
+      ],
+    easing: 'easeInOutQuad',
+    duration: 1200,
+    direction: 'forward',
+    delay: 500
+});
+
+
+// Section 2 - Parallax Scrolling Effect - Title Text
+
+var rellax =  new Rellax('.s3_header_img');
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////                    SECTION - 3                ///////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+// Wrapping up text for Section 3 Header
+var wraptext = document.querySelector('.s3_heading .letters'); 
+wraptext.innerHTML = wraptext.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.s3_heading .letter',
+    translateY: ["0.2em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml7',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
