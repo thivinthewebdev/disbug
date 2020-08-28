@@ -522,3 +522,5 @@ anime.timeline({loop: false})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+  // end
