@@ -10,7 +10,7 @@ body {
 
 .container-fluid {
     background-color: #fffaf3;
-    color: #233560;
+    color: #1a1a1a;
 }
 
 .navbar {
@@ -36,6 +36,61 @@ body {
     height: 85%;
   }
 
+  #sec1_button_1
+  {
+    border-radius: 0 !important;
+
+    &:hover{
+
+      #s1_button_1
+      {
+        transform: rotate(90deg);
+        
+			  // transform-box: fill-box;"
+        
+      }
+    }
+    #s1_button_1
+    {
+      transform: rotate(0deg);
+      transform-origin: 45% 50%;
+      transition: all 0.6s ease-in-out;
+    }
+
+  }
+
+  #sec1_button_2
+  {
+    border-radius: 0 !important;
+    border: 2px solid #333;
+
+    &:hover{
+
+      #s1_button_2
+      {
+        transform: translateX(0.9vw) translateY(.3vw) scale(1.4);
+
+        #Vector11
+        {
+          fill: #fff;
+          stroke: #fff;
+        }
+
+        
+			  // transform-box: fill-box;"
+        
+      }
+    }
+    #s1_button_2
+    {
+      transform: translateX(0.3vw) translateY(.3vw) scale(1.4);
+      // transform-origin: 45% 50%;
+      transition: all 0.6s ease-in-out;
+    }
+
+
+  }
+
   .heading{
     h1
     {
@@ -44,7 +99,7 @@ body {
       white-space: nowrap;
       overflow: hidden;
       padding-left:24vw;
-      animation: textTyping 2s ease normal both;
+      animation: textTyping 0s ease normal both;
     }
 
     @keyframes textTyping {
@@ -137,7 +192,7 @@ body {
     // opacity: 0.5;
     #s2_withdis_path1
     {
-      stroke-dasharray: 190;  
+      stroke-dasharray: 160;  
       stroke-dashoffset:200;
       stroke-width: 2.5px;
     }
@@ -158,8 +213,8 @@ body {
 
     #s2_withdis_path4
     {
-      stroke-dasharray: 180;  
-      stroke-dashoffset:200;
+      stroke-dasharray: 150;  
+      stroke-dashoffset:150;
       stroke-width: 2.5px;
     }
 
@@ -181,6 +236,18 @@ body {
       stroke-dasharray: 500;
       stroke-dashoffset:500;
     }
+    
+    #Flicks
+    {
+      opacity: 0;
+    }
+
+    #Tick
+    {
+      opacity: 0;
+      stroke-dasharray: 150;
+      stroke-dashoffset:150;
+    }
 
     .s2_svg2_block_back
     {
@@ -190,7 +257,7 @@ body {
     .s2_svg2_block_front
     {
       opacity: 0;
-      stroke-width: 2px;
+      stroke-width: 1px;
       stroke-dasharray: 500;
       stroke-dashoffset:500;
       transform: scale(1);
@@ -203,6 +270,30 @@ body {
       transform-box: fill-box;
       transform-origin: center;
       transform: rotate(0deg);
+    }
+
+    #block1
+    {
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    #block2
+    {
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    #block3
+    {
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    #block4
+    {
+      transform-origin: center;
+      transform-box: fill-box;
     }
   }
 

@@ -3,7 +3,7 @@
 <style>
             .translate-from-left
          {
-             animation:  dash1 2s ease forwards; ;
+             animation:  dash1 1.5s ease forwards; ;
              opacity: 1;
 
          }  
