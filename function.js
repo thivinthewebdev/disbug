@@ -36,6 +36,13 @@ var s2_svg_popup     = 1000;   // POP up Animation time
 var s2_svg_man_img   = 500;
 
 
+// IMage Scroll on Animation Setting
+var s2_svg_scroll_startAdjustment = -230;
+var s2_svg_scroll_endAdjustment = 0;
+var s2_svg_animation_speedUp = 2.2;
+var s2_svg_with_ratio = 0.7;
+var s2_svg_without_ratio = 0.8 ;
+
 
 
 ///////////////// END OF  - USER DEFINED PROPERTIES ////////////////
@@ -57,6 +64,8 @@ ScrollOut({
 ///// ------- ONLOAD DOM FUNCTIONS  --- ///////
 document.addEventListener("DOMContentLoaded", function() {
     orientationDetectFunction();
+
+   
   });
 
 //Function to detect the device being mobile/Desktop Device. 
@@ -77,7 +86,7 @@ function orientationDetectFunction()
 /////////////////////////////////////////////////////////////////////////////////
 $(".logo").hover( function()
 {
-    $("#logo-disbug-img").attr("src" ,"./asserts/0_Bug_Closed.svg")
+    $("#logo-disbug-img").attr("src" ,"./asserts/Bug_anim.svg")
 }
 ,function()
 {
@@ -209,7 +218,7 @@ if(!isMobile)
 
 // Section 1 - NUmbers Percentage Animation
 //Delayed for 1200 s for the top heading animation to finish
-setTimeout(animateNumber(document.getElementById("NumPercent"),incrementNum,durationNum,endValue),600); 
+setTimeout(animateNumber(document.getElementById("NumPercent"),incrementNum,durationNum,endValue),200); 
 
 
 
@@ -232,7 +241,7 @@ function  animateNumber(element,incrementNum,durationNum,endValue)
 /////////////////////////////////////////////////////////////////////////////////
 
 // if(!isMobile)
-// {
+// {s2_svg_startScroll
 //     $(window).scroll(function() {
 //         var h = $(window).scrollTop();
 
@@ -282,10 +291,9 @@ function  animateNumber(element,incrementNum,durationNum,endValue)
 
 // Section 2 - With Disbug image animation - Anime.js
 
-
 var timeline_with_Disbug = anime.timeline({
     easing: 'linear',
-    duration: 2000,loop:false
+    duration: 2000,loop:false,autoplay: false
   });
 
 
@@ -495,6 +503,44 @@ var timeline_with_Disbug = anime.timeline({
 })
 ;
 
+// get the parameters for start and end of Scroll
+// Start scroll is triggered by var rect = document.getElementById("s2_heading_text").getBoundingClientRect();
+ // Section 2 Animation Properties
+ var rect = $("#s2_heading_text1").offset();
+console.log(rect.top);
+ var s2_svg_startScroll = rect.top;
+ s2_svg_startScroll += s2_svg_scroll_startAdjustment;
+
+ var rect2 = $("#sec3_header_main").offset();
+ var s2_svg_endScroll = rect2.top;
+ s2_svg_endScroll += s2_svg_scroll_endAdjustment;
+
+ var s2_svg_animDuration = timeline_with_Disbug.duration;
+ var s2_svg_scrollLen  = s2_svg_endScroll - s2_svg_startScroll;
+
+ var s2_animPerScroll = s2_svg_animDuration/s2_svg_scrollLen;
+
+
+
+console.log(" start : ", s2_svg_startScroll , " end: " , s2_svg_endScroll , " scrol len : ", s2_svg_scrollLen , " anim scrol : " , s2_animPerScroll);
+if(!isMobile)
+{
+    $(window).scroll(function() {
+        var h = $(window).scrollTop();
+        var disp = h - s2_svg_startScroll  ;
+        console.log(" h : " , h , " start scroll : ", s2_svg_startScroll , " disp : ", disp, " end: " , s2_svg_endScroll , " scrol len : ", s2_svg_scrollLen , " anim scrol : " , s2_animPerScroll);
+
+        if(disp >= 1 && disp < s2_svg_scrollLen )
+        {
+            timeline_with_Disbug.seek(s2_animPerScroll*disp*s2_svg_animation_speedUp)
+        }
+        else
+        {
+            timeline_with_Disbug.seek(0)
+        }
+        
+    });
+}
 
 // Section 2 - Parallax Scrolling Effect - Title Text
 
