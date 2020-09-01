@@ -282,9 +282,10 @@ function  animateNumber(element,incrementNum,durationNum,endValue)
 
 // Section 2 - With Disbug image animation - Anime.js
 
+
 var timeline_with_Disbug = anime.timeline({
     easing: 'linear',
-    duration: 2000,loop:true,
+    duration: 2000,loop:false
   });
 
 
