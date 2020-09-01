@@ -37,11 +37,11 @@ var s2_svg_man_img   = 500;
 
 
 // IMage Scroll on Animation Setting
-var s2_svg_scroll_startAdjustment = -230;
-var s2_svg_scroll_endAdjustment = 0;
-var s2_svg_animation_speedUp = 2.2;
-var s2_svg_with_ratio = 0.7;
-var s2_svg_without_ratio = 0.8 ;
+var s2_svg_scroll_startAdjustment = -230;   //the lower the value, the earlier the animation will start
+var s2_svg_scroll_endAdjustment = -200;        // the higher the value, the later the animation will end
+var s2_svg_animation_speedUp = 2.2;       // Speed up value for animation -- Default value should be 1.0
+var s2_svg_withANDwithout_ratio = 1.3;    // How fast with disbug should run compared to without disbug ( value should be greater than 1.0)
+
 
 
 
@@ -521,8 +521,507 @@ console.log(rect.top);
  var s2_animPerScroll = s2_svg_animDuration/s2_svg_scrollLen;
 
 
-
 console.log(" start : ", s2_svg_startScroll , " end: " , s2_svg_endScroll , " scrol len : ", s2_svg_scrollLen , " anim scrol : " , s2_animPerScroll);
+
+
+
+// Sec 2 - IMage 1 anime.js
+
+var timeline_without_Disbug = anime.timeline({
+    easing: 'linear',
+    duration: 2000,loop:false,autoplay: false,
+  });
+
+
+  timeline_without_Disbug
+  //Man - 1
+  .add({
+    targets: "#man1_wod",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_man_img,
+    direction: 'forward',
+    delay: 1000
+})
+//Path - 1 - Stroke Fill
+.add({
+    targets: "#s2_withoutdis_path1",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+// Block 1 - Outer Stroke
+.add({
+    targets: "#block1_wod",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 2,
+     easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+// Block - 1 - background opacity turn 0
+.add({
+    targets: "#block1_back_wod",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 5,
+    direction: 'forward'
+})
+
+// Block - 1 - Zoom out 
+.add({
+    targets: "#block1_wod",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: 2,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+//Path - 2 Stroke Fill
+.add({
+    targets: "#s2_withoutdis_path2",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+// Block 2 - Outer Stroke
+.add({
+    targets: "#block1_wod",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 2,
+     easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+// Block - 2 - background opacity turn 0
+.add({
+    targets: "#block2_back_wod",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 5,
+    direction: 'forward'
+})
+
+// Block - 2 - Zoom out 
+.add({
+    targets: "#block2_wod",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: 2,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+
+//pATH 3 ------------
+//Path - 2 Stroke Fill
+.add({
+    targets: "#s2_withoutdis_path3",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+// Block 2 - Outer Stroke
+.add({
+    targets: "#block3_wod",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 2,
+     easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+// Block - 2 - background opacity turn 0
+.add({
+    targets: "#block3_back_wod",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 5,
+    direction: 'forward'
+})
+
+// Block - 3 - Zoom out 
+.add({
+    targets: "#block3_wod",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: 2,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+
+//path 4 ----
+
+//Path - 2 Stroke Fill
+.add({
+    targets: "#s2_withoutdis_path4",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+// Block 2 - Outer Stroke
+.add({
+    targets: "#block4_wod",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 2,
+     easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+// Block - 2 - background opacity turn 0
+.add({
+    targets: "#block4_back_wod",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 5,
+    direction: 'forward'
+})
+
+// Block - 2 - Zoom out 
+.add({
+    targets: "#block4_wod",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: 2,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+
+//path 5 ----
+
+//Path - 2 Stroke Fill
+.add({
+    targets: "#s2_withoutdis_path5",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+// Block 2 - Outer Stroke
+.add({
+    targets: "#block5_wod",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 2,
+     easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+// Block - 2 - background opacity turn 0
+.add({
+    targets: "#block5_back_wod",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 5,
+    direction: 'forward'
+})
+
+// Block - 2 - Zoom out 
+.add({
+    targets: "#block5_wod",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: 2,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+
+//path 6 ----
+
+//Path - 2 Stroke Fill
+.add({
+    targets: "#s2_withoutdis_path6",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+
+// Block 2 - Outer Stroke
+.add({
+    targets: "#block6_wod",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    strokeWidth: 2,
+     easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+// Block - 2 - background opacity turn 0
+.add({
+    targets: "#block6_back_wod",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 5,
+    direction: 'forward'
+})
+
+// Block - 2 - Zoom out 
+.add({
+    targets: "#block6_wod",
+    keyframes: [
+        {scale: 1,opacity: 0.2},
+        {scale: 1.1, opacity: 1,translateX: '0.2vw'},
+        {scale: 1, opacity: 1, translateX: '0vw'}
+      ],
+    opacity: 1,
+    strokeWidth: 2,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_popup,
+    direction: 'forward'
+})
+
+
+
+
+//path 4 ----
+
+//Path - 2 Stroke Fill
+.add({
+    targets: "#s2_withoutdis_path7",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward'
+})
+//Man 2
+.add({
+    targets: "#man2_wod",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward'
+})
+
+//man2 mouth open
+.add({
+    targets: "#Mouth_Close",
+    d: "M366.42 365.45C366.42 365.45 356.98 335.45 347.35 340.63C338.72 345.25 324.5 353.33 323.27 352.71C322.04 352.09 318.81 346.24 318.81 346.24C318.81 346.24 321.87 347.9 323.19 346.5C324.51 345.1 325.81 338.88 318.11 337.04L318.28 332.84C316.41 332.132 314.577 331.327 312.79 330.43C311.79 329.66 323.2 320.02 323.2 320.02",
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward'
+})
+
+//chat2 icon appear
+.add({
+    targets: "#chat2",
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 800,
+    direction: 'forward'
+})
+
+//chat2 -- Dissappear
+
+.add({
+    targets: "#chat2",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 100,
+    direction: 'forward'
+})
+
+//man2- mouth close
+.add({
+    targets: "#Mouth_Close",
+    d: "M366.42 365.45C366.42 365.45 356.98 335.45 347.35 340.63C338.72 345.25 324.5 353.33 323.27 352.71C322.04 352.09 318.81 346.24 318.81 346.24C318.81 346.24 321.87 347.9 323.19 346.5C324.51 345.1 325.81 338.88 318.11 337.04L318.28 332.84C316.41 332.132 314.577 331.327 312.79 330.43C311.79 329.66 323.2 320.02 323.2 320.02",
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward'
+})
+
+
+
+//Man1- questionMark
+.add({
+    targets: "#Question",
+    opacity: 1,
+    translateX: '-1vw',
+    translateY: '1vh',
+    scale:1.1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+
+//chat1 -- Appear
+
+.add({
+    targets: "#chat1",
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 800,
+    direction: 'forward'
+})
+
+//Man1 Exclamation - Spiral
+
+.add({
+    targets: "#Spiral",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+//chat1 -- DisAppear
+
+.add({
+    targets: "#chat1",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward'
+})
+
+//----- Chat 2
+
+//man2 mouth open
+.add({
+    targets: "#Mouth_Close",
+    d: "M366.42 365.45C366.42 365.45 356.98 335.45 347.35 340.63C338.72 345.25 324.5 353.33 323.27 352.71C322.04 352.09 318.81 346.24 318.81 346.24C318.81 346.24 321.87 347.9 323.19 346.5C324.51 345.1 325.81 338.88 318.11 337.04L318.28 332.84C316.41 332.132 314.577 331.327 312.79 330.43C311.79 329.66 323.2 320.02 323.2 320.02",
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward'
+})
+
+//chat2 icon appear
+.add({
+    targets: "#chat4",
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 800,
+    direction: 'forward'
+})
+
+//chat2 -- Dissappear
+
+.add({
+    targets: "#chat4",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 100,
+    direction: 'forward'
+})
+
+//man2- mouth close
+.add({
+    targets: "#Mouth_Close",
+    d: "M366.42 365.69C366.42 365.69 356.98 335.69 347.35 340.87C338.72 345.48 323.56 346.82 322.35 346.21C321.14 345.6 317.88 339.73 317.88 339.73C317.88 339.73 325.82 339.12 318.12 337.28L318.29 333.08C316.42 332.372 314.587 331.567 312.8 330.67C311.8 329.9 323.21 320.26 323.21 320.26C311.79 329.66 323.2 320.02 323.2 320.02",
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward'
+})
+
+
+
+//Man1- questionMark
+.add({
+    targets: "#Question",
+    opacity: 1,
+    translateX: '-1vw',
+    translateY: '-1vh',
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+
+//chat1 -- Appear
+
+.add({
+    targets: "#chat3",
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 800,
+    direction: 'forward'
+})
+
+//Man1 Exclamation - Spiral
+
+.add({
+    targets: "#Spiral",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
+//chat1 -- DisAppear
+
+.add({
+    targets: "#chat3",
+    opacity: 0,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 200,
+    direction: 'forward'
+})
+
+
+
+;
+
+
+var s2_animPerScroll_wod = timeline_without_Disbug.duration/s2_svg_scrollLen;
+
+
 if(!isMobile)
 {
     $(window).scroll(function() {
@@ -533,6 +1032,7 @@ if(!isMobile)
         if(disp >= 1 && disp < s2_svg_scrollLen )
         {
             timeline_with_Disbug.seek(s2_animPerScroll*disp*s2_svg_animation_speedUp)
+            timeline_without_Disbug.seek(s2_animPerScroll_wod*disp*s2_svg_animation_speedUp / s2_svg_withANDwithout_ratio)
         }
         else
         {
@@ -541,6 +1041,7 @@ if(!isMobile)
         
     });
 }
+
 
 // Section 2 - Parallax Scrolling Effect - Title Text
 
@@ -553,4 +1054,4 @@ var rellax =  new Rellax('.rellax');
 /////////////////////////////////////////////////////////////////////////////////
 
 
-  // end
+  // endfalse,autoplay: false

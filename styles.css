@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   overflow-x: hidden;
 }
 
@@ -294,6 +294,153 @@ body {
   transform-box: fill-box;
 }
 
+.section2 .s2_svg1 #s2_withoutdis_path1 {
+  stroke-dasharray: 68;
+  stroke-dashoffset: 68;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg1 #s2_withoutdis_path2 {
+  stroke-dasharray: 183;
+  stroke-dashoffset: 183;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg1 #s2_withoutdis_path3 {
+  stroke-dasharray: 91;
+  stroke-dashoffset: 91;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg1 #s2_withoutdis_path4 {
+  stroke-dasharray: 225;
+  stroke-dashoffset: 225;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg1 #s2_withoutdis_path5 {
+  stroke-dasharray: 424;
+  stroke-dashoffset: 424;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg1 #s2_withoutdis_path6 {
+  stroke-dasharray: 119;
+  stroke-dashoffset: 119;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg1 #s2_withoutdis_path7 {
+  stroke-dasharray: 309;
+  stroke-dashoffset: 309;
+  stroke-width: 2.5px;
+}
+
+.section2 .s2_svg1 #s2_withoutdis_path_back {
+  opacity: 0.5;
+}
+
+.section2 .s2_svg1 #man1_wod {
+  opacity: 0.5;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.section2 .s2_svg1 #man2_wod {
+  opacity: 0.5;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+
+.section2 .s2_svg1 .s2_svg2_block_back {
+  opacity: 0.5;
+}
+
+.section2 .s2_svg1 .s2_svg2_block_front {
+  opacity: 0;
+  stroke-width: 1px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transform-box: fill-box;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.section2 .s2_svg1 #s2_svg_man2_hand {
+  transform-box: fill-box;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.section2 .s2_svg1 #block1_wod {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.section2 .s2_svg1 #block2_wod {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.section2 .s2_svg1 #block3_wod {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.section2 .s2_svg1 #block4_wod {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.section2 .s2_svg1 #block5_wod {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.section2 .s2_svg1 #block6_wod {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.section2 .s2_svg1 #chat1 {
+  opacity: 0;
+}
+
+.section2 .s2_svg1 #chat2 {
+  opacity: 0;
+}
+
+.section2 .s2_svg1 #chat3 {
+  opacity: 0;
+}
+
+.section2 .s2_svg1 #chat4 {
+  opacity: 0;
+}
+
+.section2 .s2_svg1 #Question {
+  opacity: 0;
+  -webkit-transform: translateY(0vw) translateX(0vh);
+          transform: translateY(0vw) translateX(0vh);
+}
+
+.section2 .s2_svg1 #Spiral {
+  stroke-dasharray: 92px;
+  stroke-dashoffset: 95px;
+  -webkit-transition: all ease;
+  transition: all ease;
+}
+
 .section2 .section2_leftBG {
   position: absolute;
   left: 0;
@@ -357,7 +504,7 @@ body {
   bottom: 40px;
   right: 40px;
   background-color: #1a73e8;
-  color: #FFF;
+  color: #fff;
   border-radius: 50px;
   text-align: center;
   -webkit-box-shadow: 2px 2px 3px #999;
@@ -423,7 +570,7 @@ body {
   color: #fff;
   width: 130px;
   height: 11px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   text-align: center;
 }
