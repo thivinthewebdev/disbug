@@ -48,9 +48,12 @@ html {
 		
 		#preload_txt_div
 		{
-			width: 45vw;
+			width: 100%;
 			height: 30vh;
 			padding-top: 30vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			.preload_txt
 			{
@@ -60,7 +63,7 @@ html {
 				border-right: solid 5px;
 				white-space: nowrap;
 				overflow: hidden;
-				width: 10vw;
+				width: 100px;
 				animation: textTyping 1.5s ease normal both;
 				// transform: translateX(7vw) translateY(20vh);
 				// position: absolute;
@@ -173,7 +176,7 @@ body {
 				width: 0;
 			}
 			to {
-				width: 40vw;
+				width: 550px;
 				border-right: solid 0px;
 			}
 		}
@@ -266,8 +269,8 @@ body {
 		// opacity: 0.5;
 		max-width: 50vw;
 		#s2_withdis_path1 {
-			stroke-dasharray: 160;
-			stroke-dashoffset: 200;
+			stroke-dasharray: 156;
+			stroke-dashoffset: 156;
 			stroke-width: 2.5px;
 		}
 
@@ -284,8 +287,8 @@ body {
 		}
 
 		#s2_withdis_path4 {
-			stroke-dasharray: 150;
-			stroke-dashoffset: 150;
+			stroke-dasharray: 147;
+			stroke-dashoffset: 147;
 			stroke-width: 2.5px;
 		}
 
@@ -363,14 +366,19 @@ body {
 		// opacity: 0.5;
 		max-width: 50vw;
 		#s2_withoutdis_path1 {
-			stroke-dasharray: 68;
-			stroke-dashoffset: 68;
+			stroke-dasharray: 65;
+			stroke-dashoffset: 65;
 			stroke-width: 2.5px;
+		}
+		#Question
+		{
+			transform: translateX(0vh) translateY(0vh) scale(1);
+			transition: all;
 		}
 
 		#s2_withoutdis_path2 {
-			stroke-dasharray: 183;
-			stroke-dashoffset: 183;
+			stroke-dasharray: 178;
+			stroke-dashoffset: 178;
 			stroke-width: 2.5px;
 		}
 
@@ -381,8 +389,8 @@ body {
 		}
 
 		#s2_withoutdis_path4 {
-			stroke-dasharray: 225;
-			stroke-dashoffset: 225;
+			stroke-dasharray: 218;
+			stroke-dashoffset: 218;
 			stroke-width: 2.5px;
 		}
 		
@@ -400,8 +408,8 @@ body {
 		}
 
 		#s2_withoutdis_path7 {
-			stroke-dasharray: 309;
-			stroke-dashoffset: 309;
+			stroke-dasharray: 303;
+			stroke-dashoffset: 303;
 			stroke-width: 2.5px;
 		}
 
@@ -539,7 +547,18 @@ body {
 
 		li {
 			list-style-image: url(./asserts/tickmark.svg);
+			padding: 4px;
 		}
+	}
+
+	.sec3-list
+	{
+		font-size: 1.12rem;;
+	}
+
+	.s3_card
+	{
+		max-width: 23%;
 	}
 }
 
@@ -558,6 +577,10 @@ body {
 
 	img {
 		height: 100px;
+	}
+	.twitter-tweet *
+	{
+		font-size: 10px !important;
 	}
 }
 
@@ -651,15 +674,108 @@ body {
 		overflow-x: hidden;
 	}
 
+	.spinner-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #FFFAF2;
+		z-index: 999999;
+		overflow-x: hidden;
+	
+	
+	
+		#preload_flex
+		{
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			overflow-x: hidden;
+			#preload_img_div
+			{
+				height: 50vh;
+				width: 45vw;
+				margin-bottom: 15vh ;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				#preload_img
+				{
+					width: 50%;
+					height: 50%; 
+					opacity: 0.5;
+					animation-delay: 2s;
+					transition: opacity 1s ease infinite 2s;
+					
+					
+	
+					// position: absolute;
+					// top: 37%;
+					// left: 20%;
+				}
+			}
+			
+			#preload_txt_div
+			{
+				width: 100%;
+				height: 30vh;
+				padding-top: 30vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow-wrap: break-word;
+				word-wrap: break-word;
+				hyphens: auto;
+	
+				.preload_txt
+				{
+					// width: 45%;
+					// position: absolute;
+					// width: 24vw;
+					border-right: solid 5px;
+					white-space: nowrap;
+					overflow: hidden;
+					max-width: 100px;
+					// height: 300px;
+					overflow-wrap: break-word;
+					word-wrap: break-word;
+					hyphens: auto;
+					// animation: textTyping 1.5s ease normal both;
+					// transform: translateX(7vw) translateY(20vh);
+					// position: absolute;
+					// transform: translateX(-25vh);
+				}
+			}
+		}
+		
+	
+		}
+	
+
 	.section1 {
+		overflow-x: hidden;
 		.sec1-main-img {
 			height: 85%;
 			padding-top: 3vh ;
+			max-width: 90%;
 		}
 	}
 
 	.section2 {
 		position: relative;
+		overflow-x: hidden;
 
+	}
+
+	.section3{
+		overflow-x: hidden;
+		.s3_card
+	{
+		max-width: 43%;
+	}
 	}
 }

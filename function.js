@@ -90,26 +90,37 @@ function orientationDetectFunction()
 /////////////////////////////////////////////////////////////////////////////////
 /////////////              PRE LOADER                       ///////////////////
 /////////////////////////////////////////////////////////////////////////////////
-
+if (window.innerHeight > window.innerWidth)   // Some kind of potrait mode 
+{
+    // alert("Device is in Potrait mode, Please change it to landscape mode");
+    isMobile  = true;       
+}   
+else{
+    isMobile = false;
+}
     // Preloading SVG
-setTimeout(function(){   
-    $(document).ready(function() {
-        //Preloader
-        var preloaderFadeOutTime = 700;
-        function hidePreloader() {
-        var preloader = $('.spinner-wrapper');
-        preloader.fadeOut(preloaderFadeOutTime);
-        }
-        hidePreloader();
-     });
-    },  1500 ); // Preload SVG delay time
-    
-    // Delay for Loading Html
-    $(document).ready(function() {
-        $("#html").delay(4000);
-        $("html").delay(4000);
-        $("#mybody").delay(4000);
-    });
+if(!isMobile)
+{
+    setTimeout(function(){   
+        $(document).ready(function() {
+            //Preloader
+            var preloaderFadeOutTime = 700;
+            function hidePreloader() {
+            var preloader = $('.spinner-wrapper');
+            preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+         });
+        },  1500 ); // Preload SVG delay time
+        
+        // Delay for Loading Html
+        $(document).ready(function() {
+            $("#html").delay(4000);
+            $("html").delay(4000);
+            $("#mybody").delay(4000);
+        });
+}
+
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////                   HEADER                       ///////////////////
@@ -141,6 +152,15 @@ var lastScrollTop = 0;
 var val;
 var rotateVal;
 var opacityVal;
+
+if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
+{
+    // alert("Device is in Potrait mode, Please change it to landscape mode");
+    isMobile  = true;       
+}   
+else{
+    isMobile = false;
+}
 
 if(!isMobile)
 {
@@ -197,7 +217,14 @@ if(!isMobile)
 }
 
 
-
+if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
+{
+    // alert("Device is in Potrait mode, Please change it to landscape mode");
+    isMobile  = true;       
+}   
+else{
+    isMobile = false;
+}
 
 // ------- Section 1 - Scroll the Add to chrome button and Try Demo Button - Scroll down ------- //
 if(!isMobile)
@@ -1090,12 +1117,24 @@ delay: 1000
     targets: "#Question",
     opacity: 1,
     translateX: '-1vw',
-    translateY: '1vh',
+    translateY: '-6vh',
     scale:1.1,
     easing: 'cubicBezier(.5, .05, .1, .3)',
     duration: 400,
     direction: 'forward'
 })
+
+.add({
+    targets: "#Question",
+    opacity: 0,
+    translateX: '0vw',
+    translateY: '0vh',
+    scale:1.1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: 400,
+    direction: 'forward'
+})
+
 
 
 //chat1 -- Appear
@@ -1174,11 +1213,12 @@ delay: 1000
     targets: "#Question",
     opacity: 1,
     translateX: '-1vw',
-    translateY: '-1vh',
+    translateY: '-6vh',
     easing: 'cubicBezier(.5, .05, .1, .3)',
     duration: 400,
     direction: 'forward'
 })
+
 
 
 //chat1 -- Appear
@@ -1217,13 +1257,14 @@ var s2_animPerScroll_wod = timeline_without_Disbug.duration/s2_svg_scrollLen;
 
 var animationPlayed = false;
 // Animate on Scroll -- Disabled 
-if(!isMobile)
-{
+// if(!isMobile)
+// {
     $(window).scroll(function() {
         var h = $(window).scrollTop();
         console.log("hhh" , h, "scrolltop : ",s2_svg_startScroll )
-        if(s2_svg_startScroll >= h && !animationPlayed)
+        if(s2_svg_startScroll   <= h && animationPlayed === false)
         {
+            // console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxjhsaffffffffffffffffffffffffffffffffffffffffffffkvhasvdjhasvdjhasvdjhasvdkjhasvdjahsvdkjashdv")
             timeline_with_Disbug.play()
             timeline_without_Disbug.play()
             animationPlayed = true;
@@ -1231,7 +1272,7 @@ if(!isMobile)
         }
         
     });
-}
+// }
 
 
 
