@@ -521,23 +521,19 @@ body {
 }
 
 .section4 {
-	position: relative;
+  position: relative;
+  .twitter_container {
+    background-color: #fffaf3;
+  }
 	.section4_BG {
 		position: absolute;
 		right: 0;
-		top: -70px;
+		top: -75px;
 		height: 200px;
 	}
 
 	img {
 		height: 100px;
-	}
-
-	.contact-container {
-		background-color: #fffaf3;
-		max-width: 330px;
-		min-width: 330px;
-		vertical-align: top;
 	}
 }
 
