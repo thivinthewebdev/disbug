@@ -64,6 +64,12 @@ ScrollOut({
 ///// ------- ONLOAD DOM FUNCTIONS  --- ///////
 document.addEventListener("DOMContentLoaded", function() {
     orientationDetectFunction();
+    // Section 2 - Parallax Scrolling Effect - Title Text
+if(!isMobile)
+{
+     var rellax =  new Rellax('.rellax');
+}
+   
 
    
   });
@@ -196,11 +202,12 @@ if(!isMobile)
 // ------- Section 1 - Scroll the Add to chrome button and Try Demo Button - Scroll down ------- //
 if(!isMobile)
 {
+    console.log("jkdfaglllllllllllllllllllllllllhhhhhhhhhhhhhhhhhhhhhhhhl");
     $(window).scroll(function() {
         var h = $(window).scrollTop();
         var s1_btn_trans_per_scroll = s1_btn_transY_max / ( s1_btn_end_pos - s1_btn_start_pos ) ;
         
-        if ( h >=  s1_btn_start_pos && h <= s1_btn_end_pos )
+        if ( h >=  s1_btn_start_pos && h <= s1_btn_end_pos && !isMobile )
         {
             var val1 = (h - s1_btn_start_pos) *  s1_btn_trans_per_scroll;
             $(".disbug-btn").css( 'transform','translateY(' + val1 + 'px)',
@@ -216,7 +223,7 @@ if(!isMobile)
 
         }
 
-        else if ( h >= s1_btn_end_pos) 
+        else if ( h >= s1_btn_end_pos && !isMobile) 
         {
             $(".disbug-btn").css( 'opacity',0);
             $(".demo-btn").css( 'opacity',0);
@@ -1249,9 +1256,7 @@ if(!isMobile)
 // }
 
 
-// Section 2 - Parallax Scrolling Effect - Title Text
-
-var rellax =  new Rellax('.rellax');
+ 
 
 
 

@@ -681,4 +681,17 @@ body {
   -webkit-transform: translateY(8vh);
           transform: translateY(8vh);
 }
+
+@media only screen and (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+  .section1 .sec1-main-img {
+    height: 85%;
+    padding-top: 3vh;
+  }
+  .section2 {
+    position: relative;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
