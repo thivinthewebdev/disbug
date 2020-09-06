@@ -82,6 +82,30 @@ function orientationDetectFunction()
 }   
 
 /////////////////////////////////////////////////////////////////////////////////
+/////////////              PRE LOADER                       ///////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+    // Preloading SVG
+setTimeout(function(){   
+    $(document).ready(function() {
+        //Preloader
+        var preloaderFadeOutTime = 700;
+        function hidePreloader() {
+        var preloader = $('.spinner-wrapper');
+        preloader.fadeOut(preloaderFadeOutTime);
+        }
+        hidePreloader();
+     });
+    },  1500 ); // Preload SVG delay time
+    
+    // Delay for Loading Html
+    $(document).ready(function() {
+        $("#html").delay(4000);
+        $("html").delay(4000);
+        $("#mybody").delay(4000);
+    });
+
+/////////////////////////////////////////////////////////////////////////////////
 /////////////                   HEADER                       ///////////////////
 /////////////////////////////////////////////////////////////////////////////////
 $(".logo").hover( function()
@@ -533,16 +557,16 @@ var timeline_without_Disbug = anime.timeline({
   });
 
 
-  timeline_without_Disbug
-  //Man - 1
-  .add({
-    targets: "#man1_wod",
-    strokeDashoffset: [anime.setDashoffset, 0],
-    opacity: 1,
-    easing: 'cubicBezier(.5, .05, .1, .3)',
-    duration: s2_svg_man_img,
-    direction: 'forward',
-    delay: 1000
+timeline_without_Disbug
+//Man - 1
+.add({
+targets: "#man1_wod",
+strokeDashoffset: [anime.setDashoffset, 0],
+opacity: 1,
+easing: 'cubicBezier(.5, .05, .1, .3)',
+duration: s2_svg_man_img,
+direction: 'forward',
+delay: 1000
 })
 //Path - 1 - Stroke Fill
 .add({
@@ -1013,34 +1037,50 @@ var timeline_without_Disbug = anime.timeline({
     duration: 200,
     direction: 'forward'
 })
-
-
-
 ;
 
 
 var s2_animPerScroll_wod = timeline_without_Disbug.duration/s2_svg_scrollLen;
 
-
+var animationPlayed = false;
+// Animate on Scroll -- Disabled 
 if(!isMobile)
 {
     $(window).scroll(function() {
         var h = $(window).scrollTop();
-        var disp = h - s2_svg_startScroll  ;
-        console.log(" h : " , h , " start scroll : ", s2_svg_startScroll , " disp : ", disp, " end: " , s2_svg_endScroll , " scrol len : ", s2_svg_scrollLen , " anim scrol : " , s2_animPerScroll);
+        console.log("hhh" , h, "scrolltop : ",s2_svg_startScroll )
+        if(s2_svg_startScroll >= h && !animationPlayed)
+        {
+            timeline_with_Disbug.play()
+            timeline_without_Disbug.play()
+            animationPlayed = true;
 
-        if(disp >= 1 && disp < s2_svg_scrollLen )
-        {
-            timeline_with_Disbug.seek(s2_animPerScroll*disp*s2_svg_animation_speedUp)
-            timeline_without_Disbug.seek(s2_animPerScroll_wod*disp*s2_svg_animation_speedUp / s2_svg_withANDwithout_ratio)
-        }
-        else
-        {
-            timeline_with_Disbug.seek(0)
         }
         
     });
 }
+
+
+
+// if(!isMobile)
+// {
+//     $(window).scroll(function() {
+//         var h = $(window).scrollTop();
+//         var disp = h - s2_svg_startScroll  ;
+//         console.log(" h : " , h , " start scroll : ", s2_svg_startScroll , " disp : ", disp, " end: " , s2_svg_endScroll , " scrol len : ", s2_svg_scrollLen , " anim scrol : " , s2_animPerScroll);
+
+//         if(disp >= 1 && disp < s2_svg_scrollLen )
+//         {
+//             timeline_with_Disbug.seek(s2_animPerScroll*disp*s2_svg_animation_speedUp)
+//             timeline_without_Disbug.seek(s2_animPerScroll_wod*disp*s2_svg_animation_speedUp / s2_svg_withANDwithout_ratio)
+//         }
+//         else
+//         {
+//             timeline_with_Disbug.seek(0)
+//         }
+        
+//     });
+// }
 
 
 // Section 2 - Parallax Scrolling Effect - Title Text

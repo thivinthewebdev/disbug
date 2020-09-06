@@ -2,6 +2,76 @@ html {
 	scroll-behavior: smooth;
 }
 
+//Preloader 
+.spinner-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #FFFAF2;
+	z-index: 999999;
+
+
+
+	#preload_flex
+	{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		#preload_img_div
+		{
+			height: 50vh;
+			width: 45vw;
+			margin-bottom: 15vh ;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			#preload_img
+			{
+				width: 50%;
+				height: 50%; 
+				opacity: 0.5;
+				animation-delay: 2s;
+				transition: opacity 1s ease infinite 2s;
+				
+				
+
+				// position: absolute;
+				// top: 37%;
+				// left: 20%;
+			}
+		}
+		
+		#preload_txt_div
+		{
+			width: 45vw;
+			height: 30vh;
+			padding-top: 30vh;
+
+			.preload_txt
+			{
+				// width: 45%;
+				// position: absolute;
+				// width: 24vw;
+				border-right: solid 5px;
+				white-space: nowrap;
+				overflow: hidden;
+				width: 10vw;
+				animation: textTyping 1.5s ease normal both;
+				// transform: translateX(7vw) translateY(20vh);
+				// position: absolute;
+				// transform: translateX(-25vh);
+			}
+		}
+	}
+	
+
+	}
+
 body {
 	font-family: "Nunito Sans", sans-serif;
 	overflow-x: hidden;
@@ -76,12 +146,12 @@ body {
 
 	.heading {
 		h1 {
-			width: 24vw;
-			border-right: solid 5px;
-			white-space: nowrap;
-			overflow: hidden;
+			width: 70vw;
+			// border-right: solid 5px;
+			// white-space: nowrap;
+			// overflow: hidden;
 			padding-left: 24vw;
-			animation: textTyping 0s ease normal both;
+			// animation: textTyping 0s ease normal both;
 		}
 
 		@keyframes textTyping {
@@ -89,7 +159,7 @@ body {
 				width: 0;
 			}
 			to {
-				width: 73vw;
+				width: 40vw;
 				border-right: solid 0px;
 			}
 		}
