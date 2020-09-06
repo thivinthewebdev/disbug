@@ -741,6 +741,7 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    font-size: 8px;
   }
   .spinner-wrapper #preload_flex #preload_img_div {
     height: 50vh;
@@ -766,34 +767,30 @@ body {
     transition: opacity 1s ease infinite 2s;
   }
   .spinner-wrapper #preload_flex #preload_txt_div {
-    width: 100%;
-    height: 30vh;
-    padding-top: 30vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
+    width: 400px;
   }
   .spinner-wrapper #preload_flex #preload_txt_div .preload_txt {
-    border-right: solid 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 100px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
+    font-size: 20px;
+    -webkit-animation: textTyping11 1.5s ease normal both;
+            animation: textTyping11 1.5s ease normal both;
+  }
+  @-webkit-keyframes textTyping11 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 300px;
+      border-right: solid 0px;
+    }
+  }
+  @keyframes textTyping11 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 300px;
+      border-right: solid 0px;
+    }
   }
   .section1 {
     overflow-x: hidden;
@@ -805,13 +802,18 @@ body {
   }
   .section2 {
     position: relative;
-    overflow-x: hidden;
+  }
+  .section2 .s2_svg1 {
+    width: 90vw;
+  }
+  .section2 .s2_svg2 {
+    width: 90vw;
   }
   .section3 {
     overflow-x: hidden;
   }
   .section3 .s3_card {
-    max-width: 43%;
+    max-width: 98%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,6 +2,37 @@
 //Author : thivin ( thivinanadh@gmail.com  )
 
 
+///////// --- GLOBAL VARIABLES DECLARATION ----- /////////
+var isMobile    =   false   ;   // To Detect Mobile Interface
+var st                      ;   // To Determine the Height of the top of Current Viewport on scroll in pixels        
+
+
+///// ------- ONLOAD DOM FUNCTIONS  --- ///////
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
+    {
+        // alert("Device is in Potrait mode, Please change it to landscape mode");
+        isMobile  = true;       
+    }   
+    else{
+        isMobile = false;
+    }
+    // Section 2 - Parallax Scrolling Effect - Title Text 
+  });
+//Function to detect the device being mobile/Desktop Device. 
+function orientationDetectFunction()
+{
+    
+}   
+
+if(isMobile === true)
+{
+    document.getElementById("preload_txt").innerHTML = "";
+    console.log(" is MOVILEEEEEEE ", isMobile)
+}
+
+
+
 ////////// ---------- USER DEFINED PROPERTIES ---------------- //////////////////////////
 
 //-------------------------SECTION -1  ---------------------------- // 
@@ -48,9 +79,6 @@ var s2_svg_withANDwithout_ratio = 1.3;    // How fast with disbug should run com
 ///////////////// END OF  - USER DEFINED PROPERTIES ////////////////
 
 
-///////// --- GLOBAL VARIABLES DECLARATION ----- /////////
-var isMobile    =   false   ;   // To Detect Mobile Interface
-var st                      ;   // To Determine the Height of the top of Current Viewport on scroll in pixels        
 
 
 /////////// ------ LIBRARY FUNCTIONS DECLARATIONS -------------- ////////////
@@ -61,46 +89,22 @@ ScrollOut({
 
 
 
-///// ------- ONLOAD DOM FUNCTIONS  --- ///////
-document.addEventListener("DOMContentLoaded", function() {
-    orientationDetectFunction();
-    // Section 2 - Parallax Scrolling Effect - Title Text
-if(!isMobile)
+
+  if(isMobile === false)
 {
      var rellax =  new Rellax('.rellax');
+     
 }
-   
 
-   
-  });
 
-//Function to detect the device being mobile/Desktop Device. 
-function orientationDetectFunction()
-{
-    if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
-    {
-        // alert("Device is in Potrait mode, Please change it to landscape mode");
-        isMobile  = true;       
-    }   
-    else{
-        isMobile = false;
-    }
-}   
+
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////              PRE LOADER                       ///////////////////
 /////////////////////////////////////////////////////////////////////////////////
-if (window.innerHeight > window.innerWidth)   // Some kind of potrait mode 
-{
-    // alert("Device is in Potrait mode, Please change it to landscape mode");
-    isMobile  = true;       
-}   
-else{
-    isMobile = false;
-}
+
     // Preloading SVG
-if(!isMobile)
-{
+
     setTimeout(function(){   
         $(document).ready(function() {
             //Preloader
@@ -113,13 +117,6 @@ if(!isMobile)
          });
         },  1500 ); // Preload SVG delay time
         
-        // Delay for Loading Html
-        $(document).ready(function() {
-            $("#html").delay(4000);
-            $("html").delay(4000);
-            $("#mybody").delay(4000);
-        });
-}
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -162,7 +159,7 @@ else{
     isMobile = false;
 }
 
-if(!isMobile)
+if(isMobile === false)
 {
     $(window).scroll(function() {
         st = $(window).scrollTop();
@@ -227,14 +224,14 @@ else{
 }
 
 // ------- Section 1 - Scroll the Add to chrome button and Try Demo Button - Scroll down ------- //
-if(!isMobile)
+if(isMobile === false)
 {
     console.log("jkdfaglllllllllllllllllllllllllhhhhhhhhhhhhhhhhhhhhhhhhl");
     $(window).scroll(function() {
         var h = $(window).scrollTop();
         var s1_btn_trans_per_scroll = s1_btn_transY_max / ( s1_btn_end_pos - s1_btn_start_pos ) ;
         
-        if ( h >=  s1_btn_start_pos && h <= s1_btn_end_pos && !isMobile )
+        if ( h >=  s1_btn_start_pos && h <= s1_btn_end_pos && isMobile === false )
         {
             var val1 = (h - s1_btn_start_pos) *  s1_btn_trans_per_scroll;
             $(".disbug-btn").css( 'transform','translateY(' + val1 + 'px)',
@@ -250,7 +247,7 @@ if(!isMobile)
 
         }
 
-        else if ( h >= s1_btn_end_pos && !isMobile) 
+        else if ( h >= s1_btn_end_pos && isMobile === false) 
         {
             $(".disbug-btn").css( 'opacity',0);
             $(".demo-btn").css( 'opacity',0);
@@ -298,7 +295,7 @@ function  animateNumber(element,incrementNum,durationNum,endValue)
 /////////////               FLOAT BUTTONS                     ///////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
-// if(!isMobile)
+// if(isMobile === false)
 // {s2_svg_startScroll
 //     $(window).scroll(function() {
 //         var h = $(window).scrollTop();
@@ -1257,7 +1254,7 @@ var s2_animPerScroll_wod = timeline_without_Disbug.duration/s2_svg_scrollLen;
 
 var animationPlayed = false;
 // Animate on Scroll -- Disabled 
-// if(!isMobile)
+// if(isMobile === false)
 // {
     $(window).scroll(function() {
         var h = $(window).scrollTop();
@@ -1276,7 +1273,7 @@ var animationPlayed = false;
 
 
 
-// if(!isMobile)
+// if(isMobile === false)
 // {
 //     $(window).scroll(function() {
 //         var h = $(window).scrollTop();
