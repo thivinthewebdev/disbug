@@ -97,6 +97,20 @@ body {
 			color: #233560;
 		}
 	}
+
+	.navbar_button
+	{
+		border-radius: 0 !important;
+		border: 2px solid #333;
+		padding-left: 20vw;
+		padding-right: 20vw;
+		
+		&:hover{
+			border: 2px solid #D76C38;
+			fill: none !important;
+			background-color: #fff !important;
+		}
+	}
 }
 
 .section1 {
@@ -241,8 +255,16 @@ body {
 		height: 400px;
 	}
 
+
+	#s2_svg_description_below
+	{
+		display: flex;
+		justify-content: space-around;
+		color: rgb(85, 89, 92);
+	}
 	.s2_svg2 {
 		// opacity: 0.5;
+		max-width: 50vw;
 		#s2_withdis_path1 {
 			stroke-dasharray: 160;
 			stroke-dashoffset: 200;
@@ -339,6 +361,7 @@ body {
 
 	.s2_svg1 {
 		// opacity: 0.5;
+		max-width: 50vw;
 		#s2_withoutdis_path1 {
 			stroke-dasharray: 68;
 			stroke-dashoffset: 68;
@@ -523,7 +546,8 @@ body {
 .section4 {
   position: relative;
   .twitter_container {
-    background-color: #fffaf3;
+	background-color: #fffaf3;
+	margin: 0px 40px 0px 40px;
   }
 	.section4_BG {
 		position: absolute;

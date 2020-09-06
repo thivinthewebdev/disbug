@@ -342,6 +342,20 @@ var timeline_with_Disbug = anime.timeline({
     direction: 'forward'
 })
 
+//Block1 Description - text 
+.add({
+    targets: "#s2_svg2_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg2_Dev_Questions").textContent = "Find a Bug";
+      }
+})
+
 // Block 1 - Outer Stroke
 .add({
     targets: "#block1",
@@ -385,6 +399,20 @@ var timeline_with_Disbug = anime.timeline({
     easing: 'cubicBezier(.5, .05, .1, .3)',
     duration: s2_svg_time_path,
     direction: 'forward'
+})
+
+//Block2 Description 
+.add({
+    targets: "#s2_svg2_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg2_Dev_Questions").textContent = "Disbug it";
+      }
 })
 
 
@@ -433,6 +461,19 @@ var timeline_with_Disbug = anime.timeline({
     direction: 'forward'
 })
 
+//Block3 Description 
+.add({
+    targets: "#s2_svg2_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg2_Dev_Questions").textContent = "Bug Fixed";
+      }
+})
 
 // Block 2 - Outer Stroke
 .add({
@@ -469,6 +510,20 @@ var timeline_with_Disbug = anime.timeline({
     direction: 'forward'
 })
 
+
+//Block3 Description  - Disaperar
+.add({
+    targets: "#s2_svg2_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg2_Dev_Questions").textContent = "";
+      }
+})
 
 // Path 4 - Animation
 .add({
@@ -578,6 +633,20 @@ delay: 1000
     direction: 'forward'
 })
 
+//Block1 Description - text 
+.add({
+    targets: "#s2_svg_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Identify a Bug";
+      }
+})
+
 // Block 1 - Outer Stroke
 .add({
     targets: "#block1_wod",
@@ -622,6 +691,21 @@ delay: 1000
     duration: s2_svg_time_path,
     direction: 'forward'
 })
+
+
+//Block2 Description - text 
+.add({
+    targets: "#s2_svg_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Take Screenshot";
+      }
+}) 
 
 // Block 2 - Outer Stroke
 .add({
@@ -670,6 +754,20 @@ delay: 1000
     direction: 'forward'
 })
 
+//Block3 Description - text 
+.add({
+    targets: "#s2_svg_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Record Screen";
+      }
+})
+
 // Block 2 - Outer Stroke
 .add({
     targets: "#block3_wod",
@@ -708,7 +806,7 @@ delay: 1000
 
 //path 4 ----
 
-//Path - 2 Stroke Fill
+//Path - 4 Stroke Fill
 .add({
     targets: "#s2_withoutdis_path4",
     strokeDashoffset: [anime.setDashoffset, 0],
@@ -716,6 +814,20 @@ delay: 1000
     easing: 'cubicBezier(.5, .05, .1, .3)',
     duration: s2_svg_time_path,
     direction: 'forward'
+})
+
+//Block4 Description - text 
+.add({
+    targets: "#s2_svg_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Update Trello";
+      }
 })
 
 // Block 2 - Outer Stroke
@@ -756,7 +868,7 @@ delay: 1000
 
 //path 5 ----
 
-//Path - 2 Stroke Fill
+//Path - 5 Stroke Fill
 .add({
     targets: "#s2_withoutdis_path5",
     strokeDashoffset: [anime.setDashoffset, 0],
@@ -766,7 +878,22 @@ delay: 1000
     direction: 'forward'
 })
 
-// Block 2 - Outer Stroke
+
+//Block5 Description - text 
+.add({
+    targets: "#s2_svg_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Steps to Reproduce";
+      }
+})
+
+// Block 5 - Outer Stroke
 .add({
     targets: "#block5_wod",
     strokeDashoffset: [anime.setDashoffset, 0],
@@ -814,6 +941,21 @@ delay: 1000
     direction: 'forward'
 })
 
+//Block6 Description - text 
+.add({
+    targets: "#s2_svg_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Sometext here";
+      }
+})
+
+
 // Block 2 - Outer Stroke
 .add({
     targets: "#block6_wod",
@@ -849,10 +991,22 @@ delay: 1000
     direction: 'forward'
 })
 
+//Block6 Description - text DISAAPEARR
+.add({
+    targets: "#s2_svg_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Dev Clarifications";
+      }
+})
 
 
-
-//path 4 ----
+//path 7 ----
 
 //Path - 2 Stroke Fill
 .add({
@@ -904,13 +1058,25 @@ delay: 1000
 //man2- mouth close
 .add({
     targets: "#Mouth_Close",
-    d: "M366.42 365.45C366.42 365.45 356.98 335.45 347.35 340.63C338.72 345.25 324.5 353.33 323.27 352.71C322.04 352.09 318.81 346.24 318.81 346.24C318.81 346.24 321.87 347.9 323.19 346.5C324.51 345.1 325.81 338.88 318.11 337.04L318.28 332.84C316.41 332.132 314.577 331.327 312.79 330.43C311.79 329.66 323.2 320.02 323.2 320.02",
+    d: "M366.42 365.69C366.42 365.69 356.98 335.69 347.35 340.87C338.72 345.48 323.56 346.82 322.35 346.21C321.14 345.6 317.88 339.73 317.88 339.73C317.88 339.73 325.82 339.12 318.12 337.28L318.29 333.08C316.42 332.372 314.587 331.567 312.8 330.67C311.8 329.9 323.21 320.26 323.21 320.26C311.79 329.66 323.2 320.02 323.2 320.02",
     easing: 'cubicBezier(.5, .05, .1, .3)',
     duration: 200,
     direction: 'forward'
 })
 
-
+//Block6 Description - text 
+.add({
+    targets: "#s2_svg_Dev_Questions",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    opacity: 1,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    duration: s2_svg_time_path,
+    direction: 'forward',
+    duration: 100,
+    update: function() {
+          document.getElementById("s2_svg_Dev_Questions").textContent = "";
+      }
+})
 
 //Man1- questionMark
 .add({
