@@ -857,7 +857,7 @@ delay: 1000
     direction: 'forward',
     duration: 100,
     update: function() {
-          document.getElementById("s2_svg_Dev_Questions").textContent = "Update Trello";
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Update Trello/Jira";
       }
 })
 
@@ -982,7 +982,7 @@ delay: 1000
     direction: 'forward',
     duration: 100,
     update: function() {
-          document.getElementById("s2_svg_Dev_Questions").textContent = "Sometext here";
+          document.getElementById("s2_svg_Dev_Questions").textContent = "Update in Slack";
       }
 })
 
