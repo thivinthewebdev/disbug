@@ -267,8 +267,6 @@ body {
 		color: rgb(85, 89, 92);
 	}
 	.s2_svg2 {
-		// opacity: 0.5;
-		max-width: 50vw;
 		#s2_withdis_path1 {
 			stroke-dasharray: 156;
 			stroke-dashoffset: 156;
@@ -364,8 +362,6 @@ body {
 
 
 	.s2_svg1 {
-		// opacity: 0.5;
-		max-width: 50vw;
 		#s2_withoutdis_path1 {
 			stroke-dasharray: 65;
 			stroke-dashoffset: 65;
@@ -775,7 +771,8 @@ body {
 		}
 
 		.section2_BG {
-			top: -35px;
+			bottom: -25px;
+			height: 200px;
 		}
 	}
 
@@ -789,7 +786,8 @@ body {
 
 	.section4 {
 		.section4_BG {
-			top: -135px;
+			top: -130px;
+			height: 180px;
 		}
 	}
 }

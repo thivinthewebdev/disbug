@@ -289,10 +289,6 @@ body {
   color: #55595c;
 }
 
-.section2 .s2_svg2 {
-  max-width: 50vw;
-}
-
 .section2 .s2_svg2 #s2_withdis_path1 {
   stroke-dasharray: 156;
   stroke-dashoffset: 156;
@@ -389,10 +385,6 @@ body {
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
-}
-
-.section2 .s2_svg1 {
-  max-width: 50vw;
 }
 
 .section2 .s2_svg1 #s2_withoutdis_path1 {
@@ -810,7 +802,8 @@ body {
     width: 90vw;
   }
   .section2 .section2_BG {
-    top: -35px;
+    bottom: -25px;
+    height: 200px;
   }
   .section3 {
     overflow-x: hidden;
@@ -819,7 +812,8 @@ body {
     max-width: 98%;
   }
   .section4 .section4_BG {
-    top: -135px;
+    top: -130px;
+    height: 180px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
