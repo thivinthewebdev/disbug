@@ -801,8 +801,8 @@ body {
   .section2 .s2_svg2 {
     width: 90vw;
   }
-  .section2 .section2_BG {
-    bottom: -25px;
+  .section2 .section2_leftBG {
+    bottom: -40px;
     height: 200px;
   }
   .section3 {
@@ -812,8 +812,7 @@ body {
     max-width: 98%;
   }
   .section4 .section4_BG {
-    top: -130px;
-    height: 180px;
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -770,8 +770,8 @@ body {
 			width: 90vw;
 		}
 
-		.section2_BG {
-			bottom: -25px;
+		.section2_leftBG {
+			bottom: -40px;
 			height: 200px;
 		}
 	}
@@ -786,8 +786,7 @@ body {
 
 	.section4 {
 		.section4_BG {
-			top: -130px;
-			height: 180px;
+			display: none;
 		}
 	}
 }
