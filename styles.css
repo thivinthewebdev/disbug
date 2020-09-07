@@ -809,11 +809,17 @@ body {
   .section2 .s2_svg2 {
     width: 90vw;
   }
+  .section2 .section2_BG {
+    top: -35px;
+  }
   .section3 {
     overflow-x: hidden;
   }
   .section3 .s3_card {
     max-width: 98%;
+  }
+  .section4 .section4_BG {
+    top: -135px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
